@@ -19,6 +19,7 @@
 \usepackage[acronym,toc,nonumberlist]{glossaries}
 \usepackage{hyperref}
 \usepackage{memhfixc}
+\usepackage{tcolorbox}
 \usepackage{tikz}
 \usetikzlibrary{arrows,shapes,backgrounds,patterns,decorations.pathreplacing, decorations.pathmorphing,decorations.markings,shadows,shapes.misc,calc, positioning}
 \captionsetup{font=footnotesize,labelfont={bf},textfont=normalfont}
@@ -29,7 +30,7 @@
 \newlength\figureheight 
 \newlength\figurewidth 
 
-% Farver til listset
+\definecolor{boxgray}{rgb}{0.122, 0.435, 0.698}% Rule colour
 \definecolor{dkgreen}{rgb}{0,0.6,0} % Definerer farven grøn til brug i præsentation af kildekode
 \definecolor{gray}{rgb}{0.5,0.5,0.5} % Definerer farven grå til brug i præsentation af kildekode
 \definecolor{mauve}{rgb}{0.58,0,0.82} % Definerer farven pink til brug i præsentation af kildekode
