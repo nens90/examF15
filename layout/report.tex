@@ -1,0 +1,124 @@
+\documentclass[a4paper,11pt,openright]{memoir}
+
+% Pakker til brug i dokumentet:
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx} % Indsættelse af billeder mm.
+\graphicspath{{../figures/}}
+\usepackage{float}
+\usepackage{amsmath,amssymb,mathtools,bm} % Diverse matematik
+\usepackage{color,xcolor}
+\usepackage{pdfpages} % Giver mulighed for at sætte hele pdf sider ind
+\usepackage{listings} % Præsentering af kode
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{pbox}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows} % Libaries til brug i tikz
+\usepackage[pdftitle={CubeSat Attitude Control with Supervisory Control System},
+            pdfauthor={Group 930,
+               Aalborg University,
+               Aalborg,
+               Denmark},
+            pdfduplex=DuplexFlipLongEdge,
+            colorlinks=false,
+            hidelinks=true,
+            pdftex,
+            pdfmenubar=true,
+            pdftoolbar=true,
+            pdfstartview={FitH}
+            ]{hyperref}
+\usepackage{memhfixc} %include after hyperref when using memoir documentclass
+\usepackage{datatool}
+\usepackage[acronym,toc,nonumberlist]{glossaries}
+\newglossary[slg]{symbols}{sym}{sbl}{List of Symbols}
+\usepackage[hang]{caption}
+\captionsetup{font=footnotesize,labelfont={bf},textfont=normalfont}
+\setlength{\captionmargin}{20pt}
+\usepackage{epstopdf}
+\epstopdfsetup{update}
+\usepackage{lipsum}
+\usepackage[textsize=footnotesize]{todonotes}
+\usepackage{lscape}
+\usepackage{ushort}
+
+% Setup af dokumentet:
+\chapterstyle{madsen} % Kapitel layoutet - ell, madsen
+\pagestyle{ruled} % Header og Footer - "plain" for intet, ud over sidetal i bunden
+\setsecnumdepth{subsection} % Hvor dybt de forskellige sections skal nummereres
+\settocdepth{section} % "Table of Contents" dybden
+\pretolerance=2500 % Sætter tolerancen for orddeling; jo højere, jo mindre orddeling
+\hyphenation{hvem hvad hvor} % Fortæller latex hvordan den må dele et ord; kun relevant hvis et ord bliver delt forkert.
+\setlength{\parindent}{1.5mm} % Størrelse af indryk ved nyt afsnit
+\setlength{\parskip}{1.8mm} % Afstand mellem afsnit ved brug af "double Enter"
+\setcounter{MaxMatrixCols}{20} % Max antal kolonner i en tabel
+\addto\captionsenglish{
+  \renewcommand{\contentsname}
+    {Table of Contents}
+}
+\newlength\figureheight 
+\newlength\figurewidth 
+
+% Penalties for blandt andet horeunger og enker.
+\clubpenalty=9996
+\widowpenalty=9999
+\brokenpenalty=4991
+\predisplaypenalty=10000
+\postdisplaypenalty=1549
+\displaywidowpenalty=1602
+\raggedbottom
+
+% Margin
+\setlrmarginsandblock{3.5cm}{2.5cm}{*} % \setlrmarginsandblock{Indbinding}{Kant}{Ratio}
+\setulmarginsandblock{2.5cm}{3.0cm}{*} % \setulmarginsandblock{Top}{Bund}{Ratio}
+
+% Farver til listset
+\definecolor{dkgreen}{rgb}{0,0.6,0} % Definerer farven grøn til brug i præsentation af kildekode
+\definecolor{gray}{rgb}{0.5,0.5,0.5} % Definerer farven grå til brug i præsentation af kildekode
+\definecolor{mauve}{rgb}{0.58,0,0.82} % Definerer farven pink til brug i præsentation af kildekode
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+
+% Listset til præsentation af kildekode
+\lstset{frame=tb,
+  language=C,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\footnotesize\ttfamily}, % basicstyle={\small\ttfamily},
+  stepnumber=2,
+  firstnumber=1,
+  escapeinside={@}{@},
+  numberfirstline=false,
+  numbers=left,
+  numbersep=8pt,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3,
+  captionpos=b,
+  keepspaces=true
+}
+
+\lstdefinelanguage{XML} {
+  morestring=[b]",
+  morestring=[s]{>}{<},
+  morecomment=[s]{<?}{?>},
+  identifierstyle=\color{darkblue},
+  stringstyle=\color{black},
+  morekeywords={xmlns,version,type}
+}
+
+\lstdefinelanguage{verb} {
+  columns=fixed,
+  fontadjust=true,
+  basewidth=0.5em
+}
+
+\checkandfixthelayout % Laver forskellige beregninger og sætter de almindelige længder op
