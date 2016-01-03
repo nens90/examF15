@@ -34,20 +34,20 @@ other will spend 5 years in prison.\\
         \item the strategie space $S = (0,1)$ \\
         where 0 is not to confess and implicate the other\\
         and 1 is to confess.
+        \item The matrix representation\\
+        \begin{tabular}{ r|c|c| }
+        \multicolumn{1}{r}{}
+         &  \multicolumn{1}{c}{$s_2 = 0$}
+         & \multicolumn{1}{c}{$s_2 = 1$} \\
+        \cline{2-3}
+        $s_1 = 0$ & $(2,2)$ & $(5,0)$ \\
+        \cline{2-3}
+        $s_1 = 1$ & $(0,5)$ & $(4,4)$ \\
+        \cline{2-3}
+        \end{tabular}
+        \item The dominating strategies is to confess $s_i = 1$
+        \item The Nash equilibrium is $(4,4)$
 \end{itemize}
-
-\begin{tabular}{ r|c|c| }
-\multicolumn{1}{r}{}
- &  \multicolumn{1}{c}{$s_2 = 0$}
- & \multicolumn{1}{c}{$s_2 = 1$} \\
-\cline{2-3}
-$s_1 = 0$ & $(2,2)$ & $(5,0)$ \\
-\cline{2-3}
-$s_1 = 1$ & $(0,5)$ & $(4,4)$ \\
-\cline{2-3}
-\end{tabular}
-
-
 
 \assignment{\textbf{Problem 2 - Multipath Routing} \\
 Imagine that there 4 nodes A, B, C and D linked as it is shown on the figure. User 1 would like to send his 
@@ -64,3 +64,19 @@ doing it alone alone, and b if he shares it with another user.\\
         \item What would be the rational choice?
 \end{itemize}
 }
+
+\section{Problem 2 - Solution}
+\begin{itemize}
+        \item The matrix representation \\
+        \begin{tabular}{ r|c|c| }
+        \multicolumn{1}{r}{}
+         &  \multicolumn{1}{c}{$s_2 = A-B-C$}
+         & \multicolumn{1}{c}{$s_2 = A-D-C$} \\
+        \cline{2-3}
+        $s_1 = B-A-D$ & $(6,8)$ & $(5,4)$ \\
+        \cline{2-3}
+        $s_1 = B-C-D$ & $(6,7)$ & $(7,5)$ \\
+        \cline{2-3}
+        \end{tabular}
+        \item The Nash equilibrium is $(5,4)$ where player 1 choose $B-A-D$ and player 2 choose $A-D-C$
+\end{itemize}
