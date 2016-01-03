@@ -3,7 +3,8 @@
 for i in {1..11}
 do
     file="mm${i}.tex"
-    if [ -f "$file" ]
+
+    if [ -e "$file" ]
     then
 	echo "$file already exists, no action performed."
     else
