@@ -3,7 +3,7 @@
 *.Orig
 *.backup
 *.*~
-exam_plan/sos/sos.pdf
+sos/sos.pdf
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
