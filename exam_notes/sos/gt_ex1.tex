@@ -1,4 +1,4 @@
-\chapter{Introduction to Systems of Systems and Game Theory}
+\chapter{Game Theory Exercise 1}
 % \assignment{ 
 \begin{itemize}
 \item Z. Han, D. Niyato, W. Saad, T. Basar, A. Hjørungnes. Game Theory in Wireless and Communication Networks:
@@ -28,7 +28,7 @@
   \item Find Nash the equilibrium.
   \end{enumerate}
 }
-\section{Problem 1 - Solution}
+
 \begin{enumerate}
 \item \textbf{Define who are the players:} There are two players in the game - The two prisoners
 \item \textbf{What are the possible strategies:} The strategy space $S = (0,1)$ \\
@@ -55,42 +55,4 @@
 
   There is a global minimum at (2,2), but this is an unstable minimum where both of the prisoners can gain, from
   changing strategy.
-\end{enumerate}
-
-\assignment{
-  \textbf{Problem 2 - Multipath Routing} \\
-  Imagine that there 4 nodes A, B, C and D linked as it is shown on the figure. User 1 would like to send his 
-  data packets from B to D; user 2 would like to send his packets from A to C. First user can chose a route 
-  B-A-D or B-C-D. There are also two choices for the second user: A-B-C and A-D-C. Throughput 
-  experienced by a user depends on whether he is using a link alone or it is shared with another user. The 
-  vectors (a; b) attached to each link denotes a throughput a user experiencing over the link: a if he is 
-  doing it alone alone, and b if he shares it with another user.\\
-  % Write a matrix to describe this game. Investigate if the game has Nash equilibrium and what would be a 
-  % rational choice for the two users.  
-  \begin{enumerate}
-  \item Formulate in matrix representation.
-  \item Find Nash equilibrium.
-  \item What would be the rational choice?
-  \end{enumerate}
-
-  \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.35\textwidth]{gt_network_ex2.png}
-  \end{figure}
-}
-
-\section{Problem 2 - Solution}
-\begin{enumerate}
-\item The matrix representation \\
-  \begin{tabular}{ r|c|c| }
-    \multicolumn{1}{r}{}
-    &  \multicolumn{1}{c}{$s_2 = A-B-C$}
-    & \multicolumn{1}{c}{$s_2 = A-D-C$} \\
-    \cline{2-3}
-    $s_1 = B-A-D$ & $(6,8)$ & $(5,4)$ \\
-    \cline{2-3}
-    $s_1 = B-C-D$ & $(6,7)$ & $(7,5)$ \\
-    \cline{2-3}
-  \end{tabular}
-\item The Nash equilibrium is $(5,4)$ where player 1 choose $B-A-D$ and player 2 choose $A-D-C$
 \end{enumerate}
