@@ -3,7 +3,7 @@
 *.Orig
 *.backup
 *.*~
-sos/sos.pdf
+sos.pdf
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
