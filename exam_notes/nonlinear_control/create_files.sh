@@ -11,6 +11,7 @@ do
 	echo "$file created."
         touch "${file}"
         echo "\chapter{Question ${i}}" > ${file}
+        echo "\clearpage" >> main.tex
         echo "\input{${file}}" >> main.tex
         echo "$file added to main.tex"
     fi
