@@ -30,10 +30,16 @@
 }
 
 \begin{enumerate}
-\item \textbf{Define who are the players:} There are two players in the game - The two prisoners
+\item \textbf{Define who are the players:} There are two players in the game - The two prisoners. The game is a
+  non-coorporative game.
 \item \textbf{What are the possible strategies:} The strategy space $S = (0,1)$ \\
-  where 0 is not to confess and implicate the other                             \\
-  and 1 is to confess.
+  where 0 is to deny and 1 is to confess. This gives the combinations:
+  \begin{itemize}\tightlist
+  \item (0,0): Both prisoners deny.
+  \item (0,1): Prisoner 1 denys and prisoner 2 confesses.
+  \item (1,0): Prisoner 1 confesses and prisoners 2 denys.
+  \item (1,1): Both prisoners confesses.
+  \end{itemize}
 \item \textbf{Formulate in matrix representation:} The matrix representation
   \begin{center}
     \begin{tabular}{ r|c|c| }
@@ -47,8 +53,11 @@
       \cline{2-3}
     \end{tabular}
   \end{center}
-\item \textbf{Is the game zero-sum game:}
-\item \textbf{Are there any dominating strategies:} The dominating strategies is to confess $s_i = 1$
+\item \textbf{Is the game zero-sum game:} No the game is a nonzero-sum game. A zero-sum game is a game where - if one
+  player gains, the other player must lose the same amount of ``cost''. An example of a sero-sum game is the
+  rock-paper-scissor game where if one player wins the other loses and there are no individual cost; just win or lose.
+\item \textbf{Are there any dominating strategies:} The dominating strategies is to confess $s_i = 1$. Because that each
+  player gains from confessing this is the dominant strategy-
 \item \textbf{Find Nash the equilibrium:} The Nash equilibrium is $(4,4)$, this is because of the fact that none of the
   players can gain from changing strategy at this point taking the other players choice in consideration. If whichever of
   the prisoners changes strategy from this point it will cause a less favorable outcome for the prisoner in question.
