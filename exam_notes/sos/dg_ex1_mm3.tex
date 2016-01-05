@@ -1,2 +1,27 @@
 \chapter{Differential Games Exercise 1 mm3}
 
+\assignment{
+  Consider the one-dimensional continuous-time optimization problem:
+  \begin{equation}
+    \label{eq:max_eq1}
+    \max_u\int_0^T -\frac{1}{2}\left( x^2 + u^2 \right)\,\up{dt}
+  \end{equation}
+  subject to:
+  \begin{equation}
+    \label{eq:max_eq2}
+    \dot{x} = -\tanh{\left( x \right)} + u,\quad x(0) = x_0
+  \end{equation}
+  \begin{enumerate}
+    \item Write the discrete-time version of \eqref{eq:max_eq1}. $\left( \text{Hint: use }\dot{x} = \frac{\Delta
+          x_k}{\Delta t}\right)$
+    \item Use the discrete maximum principle to write down the state- and costate equations.
+    \item mc. With $T = 4$, $x_0 = 5$ and $\Delta t = 1$, use matlab to solve the TPBVP (two point boundary value
+problem). (Hint: write a function with input$^1$ =``a guess on $\lambda_0$'' and output=``$\lambda_T$''. Then use \texttt{fzero} on this
+function.)
+  \end{enumerate}
+%  $^1$try -0.2.
+}
+
+
+
+
