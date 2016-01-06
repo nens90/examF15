@@ -23,7 +23,7 @@
   \footnotesize{$^1$try -0.2}
 }
 
-\textbf{1. Write the discrete-time version of \eqref{eq:max_eq1}. $\left( \text{Hint: use }\dot{x} = \frac{\Delta
+\assignment{1. Write the discrete-time version of \eqref{eq:max_eq1}. $\left( \text{Hint: use }\dot{x} = \frac{\Delta
       x_k}{\Delta t}\right)$:}
 
 The objective function is integrated, this becomes a summation in discrete time. Furthermore $x(0) = x_0$,
@@ -42,7 +42,7 @@ The constraint  are discretised using the hint given:
 \label{eq:dconstraint}
 \end{equation}
 
-\textbf{2. Use the discrete maximum principle to write down the state- and costate equations:}
+\assignment{2. Use the discrete maximum principle to write down the state- and costate equations:}
 
 The Hamiltonian is given as:
 \begin{equation}
@@ -79,9 +79,13 @@ found.
   \Delta x_k = -\left( \tanh{(x_k)} - \lambda_{k + 1} \right)\Delta t
 \end{equation}
 
-\textbf{3. With $T = 4$, $x_0 = 5$ and $\Delta t = 1$, use matlab to solve the TPBVP (two point boundary value
+\assignment{3. With $T = 4$, $x_0 = 5$ and $\Delta t = 1$, use matlab to solve the TPBVP (two point boundary value
   problem). (Hint: write a function with input$^1$ =``a guess on $\lambda_0$'' and output=``$\lambda_T$''. Then use
-  \texttt{fzero} on this function.)}
+  \texttt{fzero} on this function.)
+
+~\\
+  \footnotesize{$^1$try -0.2}
+}
 
 The state and costate equations:
 \begin{equation}
