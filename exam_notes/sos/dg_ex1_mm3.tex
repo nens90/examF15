@@ -31,11 +31,11 @@ this changes the lower limit of the summation. The objective function then becom
 \begin{equation}
   \max_u\sum_{k = 1}^{T - 1} -\frac{1}{2}\left( x^2_k + u^2_k \right)\Delta t
 \end{equation}
-The constraint  are discretised using the hint given:
+The equality constraint  are discretised using the hint given:
 \begin{equation}
   \begin{split}
-    \dot{x} = \frac{\Delta x_n}{\Delta t} &= - \tanh{(x)} + u \\
-     &= -\tanh{(x_n)} + u_k \\
+    \dot{x} = \frac{\Delta x_k}{\Delta t} &= - \tanh{(x)} + u \\
+     &= -\tanh{(x_k)} + u_k \\
      &\Downarrow \\
      \Delta x_k &= -\left( \tanh{(x_k)} - u_k \right)\Delta t
    \end{split}
