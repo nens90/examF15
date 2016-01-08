@@ -1,1 +1,28 @@
 \chapter{Differential Games Exercise 1 mm4}
+
+\assignment{
+  Consider the nonzero-sum, 2-player differential game:
+  \begin{equation}
+    \label{eq:dg_cost}
+    \max_{u_i\in \mathbb{R}} J_i = -\frac{1}{2} x(T)^2 - \frac{1}{2}\int_0^T r_i\left( u_1^2 + u_2^2 \right)\,\up{dt},
+    \quad i = 1,2
+  \end{equation}
+  subject to:
+  \begin{equation}
+    \label{eq:dg_constraint}
+    \dot{x} = ax + b_1u_1 + b_2u_2, \quad x(0) = x_0
+  \end{equation}
+  where $x(T), x_0, a, b_i \in \mathbb{R}$ and $r_i, T > 0$ for $i = 1, 2$ are given constants.
+  \begin{enumerate}
+  \item Write-up the Hamiltonian $H^i , i = 1, 2$, for the $i$th player.
+  \item Find the$^1$ (open-loop) Nash solution $\{ \bar{u}_1, \bar{u}_2 \}$ for \eqref{eq:dg_cost} and
+    \eqref{eq:gr_constraint} (the $\bar{u}_i$’s will depend on the adjoint variables).
+  \item Write-up the adjoint equation’s.
+  \item Solve the adjoint equation’s and use the obtained solutions to write-up the Nash solutions, found in exercise
+    (1b), as functions of time.
+  \item (Extra) Use the expression for $\bar{u}_i$, $i = 1, 2$, to solve \eqref{eq:dg_constraint}.
+  \end{enumerate}
+  \vspace{0.5cm}
+  \footnotesize{$^1$In the course you where only given necessary conditions for the existence of a Nash solution. However, for this
+  particular problem these conditions are also sufficient.}
+}
