@@ -27,3 +27,29 @@
   particular problem these conditions are also sufficient.}
 }
 
+\assignment{1. Write-up the Hamiltonian $H^i , i = 1, 2$, for the $i$th player.
+}
+The Hamiltonian is given as:
+\begin{equation}
+        H^{i} = F^{i} + \lambda^{i}f
+\end{equation}
+\begin{equation}
+        H^{i} = -\frac{1}{2} r^{i}\left(u^2_{i} + u^2_{i+1}\right) + \lambda^{i} \left(ax + b^{i}u^{i} + b^{i+1}u^{i+1}\right)
+\end{equation}
+
+\assignment{
+        2. Find the$^1$ (open-loop) Nash solution $\{ \bar{u}_1, \bar{u}_2 \}$ for \eqref{eq:dg_cost} and
+    \eqref{eq:dg_constraint} (the $\bar{u}_i$’s will depend on the adjoint variables).
+}
+The open-loop Nash solution is found by maximising the control signal $\{\bar{u}^{1},\bar{u}^{2}\}$ and found by:
+\begin{equation}
+        \begin{split}
+                &H^i_{u^i} = - r^i u^i + \lambda^i b^i = 0\\
+                &\Downarrow\\
+                &\bar{u}^{\,i} = \frac{b^i \lambda^i}{r^i}
+        \end{split}
+\end{equation}
+
+\assignment{
+        3. Write-up the adjoint equation’s.
+}
