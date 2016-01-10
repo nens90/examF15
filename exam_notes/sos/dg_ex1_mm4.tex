@@ -53,3 +53,32 @@ The open-loop Nash solution is found by maximising the control signal $\{\bar{u}
 \assignment{
         3. Write-up the adjoint equation’s.
 }
+The adjoint equations for the Nash solution
+\begin{equation}
+        \dot{\lambda}^i = -H^i_{x} \quad \Rightarrow \quad \dot{\lambda}^i = -a \lambda^i
+\end{equation}
+\begin{equation}
+        \lambda^i(T) = S_{x}^i \left[x(T)\right]  = -x(T)
+\end{equation}
+
+\assignment{
+        4. Solve the adjoint equation’s and use the obtained solutions to write-up the Nash solutions, found in exercise
+    (1b), as functions of time.
+}
+The solution the the adjoint differential equation can be found by the use of exponential functions.
+\begin{equation}
+        \dot{\lambda}^i = -a \lambda^i \quad \Rightarrow \quad \lambda^i(t) = e^{-a t}C
+\end{equation}
+where $C$ determines the terminating state and is given as
+\begin{equation}
+        C = -x(T) e^{aT}
+\end{equation}
+Then the complete solution becomes
+\begin{equation}
+        \lambda^i(t) = -x(T) e^{-a t} e^{aT} = -x(T)e^{a(T-t)}
+\end{equation}
+
+the optimal time dependent control $\bar{u}^i(t)$ is then given as
+\begin{equation}
+        \bar{u}^i(t) = \frac{-b^i x(t)}{r^i} e^{a(T-t)}
+\end{equation}
