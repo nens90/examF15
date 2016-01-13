@@ -99,3 +99,4 @@ sympy-plots-for-*.tex/
 *.sublime-project
 *.sublime-workspace
 nonlinear_control.pdf
+/exam_notes/sos/gt_ex2.tex.orig
