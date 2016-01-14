@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i in {1..8}
+for i in {1..7}
 do
     file="q${i}.tex"
 
