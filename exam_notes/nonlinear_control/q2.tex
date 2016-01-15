@@ -10,24 +10,53 @@ Consider the system:
 \end{split}
 \end{equation}
 
-a) is the system input-output linearizable \\
+a) Is the system Input-Output linearizable \\
 b) If yes, transform it into the normal form and specify the region over which the transformation is valid \\
 c) is the system minimum phase \\
 }
 
 \assignment{
-        a) is the system input-output linearizable
+        a) Is the system Input-Output linearisable?
 }
+We need to verify that we are able to linearise the \textbf{output} $y$ through the \textbf{input} $u$. This is done by investigating the \textit{relative degree} $\rho$, where $1 \leq \rho \leq n$, in a region $D_0 \subset D_0$
 
+\begin{equation}
+        \dot{y} = -x_1 + u \quad \rightarrow \quad \rho = 1
+\end{equation}
 
-
+which makes the system linearisable.
 
 \assignment{
 b) If yes, transform it into the normal form and specify the region over which the transformation is valid \\
 }
+We want to transform the Non-linear system to a linear system on the normal form:
+\begin{equation}
+        \dot{z} = Az + B\gamma(x) \left[u-\alpha(x)\right]
+\end{equation}
+where $z = T(x)$ is a change of variables. The transform $T(x)$ should be a continuously differential map with a continuously differential inverse also known as a \textit{diffeomorphism}.
 
-
-
+\begin{equation}
+        z = T(x) = 
+        \begin{pmatrix}
+                \phi_1(x) \\
+                \vdots \\
+                \phi_{n - \rho}(x) \\
+                --- \\
+                y(x) \\
+                \vdots \\
+                y^{\rho - 1}(x)
+        \end{pmatrix}
+        \doteq
+        \begin{pmatrix}
+                \eta \\
+                --- \\
+                \xi
+        \end{pmatrix}
+\end{equation}
+Where $\phi_1$ to $\phi_{n - \rho}$ is chosen such that $T(x)$ is a diffeomorphism on a domain $D_0 \subset D$ and 
+\begin{equation}
+        \frac{\partial \phi_{i}}{\partial x}g(x) = 0
+\end{equation}
 \assignment{
 c) is the system minimum phase    
 }
