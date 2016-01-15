@@ -57,6 +57,62 @@ Where $\phi_1$ to $\phi_{n - \rho}$ is chosen such that $T(x)$ is a diffeomorphi
 \begin{equation}
         \frac{\partial \phi_{i}}{\partial x}g(x) = 0
 \end{equation}
+In the assignment the system is given:
+\begin{equation}
+        \dot{x} = f(x) + g(x)u
+\end{equation}
+where 
+\begin{equation}
+        f(x) = 
+        \begin{bmatrix}
+                -x_1 + x_2 - x_3 \\
+                -x_1 x_2 - x_2 \\
+                -x_1
+        \end{bmatrix}
+        ,\quad 
+        g(x) = 
+        \begin{bmatrix}
+                0 \\
+                1 \\
+                1
+        \end{bmatrix}
+\end{equation}
+where 
+\begin{equation}
+        \frac{\partial \phi_{i}}{\partial x}g(x) = \frac{\partial \phi_{i}}{\partial x} 
+        \begin{bmatrix}
+                0 \\
+                1 \\
+                1
+        \end{bmatrix}
+        =
+        \begin{Bmatrix}
+                \frac{\partial \phi_{1}}{\partial x_2} + \frac{\partial \phi_{1}}{\partial x_{3}} = 0 \\
+                \frac{\partial \phi_{2}}{\partial x_2} + \frac{\partial \phi_{2}}{\partial x_{3}} = 0
+        \end{Bmatrix}
+\end{equation}
+we choose the $\phi_i$ such that it complies with the above.
+\begin{equation}
+        \begin{split}
+                \phi_1 &= x_1 \\
+                \phi_2 &= x_2 - x_3 = x_3 - x_2 \\
+                y &= x_3
+        \end{split}
+\end{equation}
+\begin{equation}
+        T(x) = 
+        \begin{bmatrix}
+                x_1 \\
+                x_3 - x_2 \\
+                x_3
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+                \eta_1 \\
+                \eta_2 \\
+                \xi
+        \end{bmatrix}
+\end{equation}
 \assignment{
 c) is the system minimum phase    
 }
