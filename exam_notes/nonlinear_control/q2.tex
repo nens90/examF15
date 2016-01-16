@@ -4,7 +4,7 @@ Consider the system:
 \begin{equation}
 \begin{split}
         \dot{x}_1 = -x_1 +x_2 - x_3 \\
-        \dot{x}_2 = - x_1 x_2 - x_2 + u \\
+        \dot{x}_2 = - x_1 x_3 - x_2 + u \\
         \dot{x}_3 = - x_1 + u \\
         y = x_3 
 \end{split}
@@ -66,7 +66,7 @@ where
         f(x) = 
         \begin{bmatrix}
                 -x_1 + x_2 - x_3 \\
-                -x_1 x_2 - x_2 \\
+                -x_1 x_3 - x_2 \\
                 -x_1
         \end{bmatrix}
         ,\quad 
@@ -103,7 +103,7 @@ we choose the $\phi_i$ such that it complies with the above.
         T(x) = 
         \begin{bmatrix}
                 x_1 \\
-                x_3 - x_2 \\
+                x_2 - x_3 \\
                 x_3
         \end{bmatrix}
         =
@@ -112,6 +112,15 @@ we choose the $\phi_i$ such that it complies with the above.
                 \eta_2 \\
                 \xi
         \end{bmatrix}
+\end{equation}
+
+We can now transform the system to the normal form.
+\begin{equation}
+        \begin{split}
+        \dot{\eta}_{1} &= \dot{x}_{1} = -x_1 + x_2 - x_3 = -\eta_1 + \eta_2 \\
+        \dot{\eta}_2 &= \dot{x}_2 - \dot{x}_3 = -x_1 x_3 - x_2 + u - (-x_1 + u) = -\xi \eta_1 - \xi - \eta_2 + \eta_1 \\
+        \dot{\xi} &= \dot{x}_3 = -\eta_1 + u
+        \end{split}
 \end{equation}
 \assignment{
 c) is the system minimum phase    
