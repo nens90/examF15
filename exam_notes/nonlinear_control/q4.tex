@@ -1,2 +1,19 @@
 \chapter{Question 4}
 \assignment{Formulate the problem of asymptotic stability and discuss how to verify asymptotic stability by means of sum of squares. Give an example.}
+We know for at fact that we can use Lyapunov functions to prove stability of non-linear systems like
+\begin{equation}
+        \dot{x} = f(x)
+        \label{eq:nonlinear}
+\end{equation}
+Where we know that if $x = 0$ is an equilibrium point for the non-linear system \ref{eq:nonlinear} and $D \subset \mathbb{R}^n$ be a domain containing $x = 0$, then if a Lyapunov function satisfying
+\begin{equation}
+        V(0) = 0 \quad \text{and} \quad V(x) > 0 \quad \in D - \{0\}
+\end{equation}
+\begin{equation}
+        \dot{V}(x) \leq 0 \quad \in D
+\end{equation}
+Then the equilibrium point $x = 0$ is \textbf{stable}. Moreover, if
+\begin{equation}
+        \dot{V}(x) < 0 \quad \in D - \{0\}
+\end{equation}
+Then $x = 0$ is \textbf{asymptotically stable}
