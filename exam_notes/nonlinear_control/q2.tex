@@ -31,7 +31,11 @@ b) If yes, transform it into the normal form and specify the region over which t
 }
 We want to transform the Non-linear system to a linear system on the normal form:
 \begin{equation}
-        \dot{z} = Az + B\gamma(x) \left[u-\alpha(x)\right]
+        \begin{split}
+                \dot{\eta} &= f_0(\eta,\xi) \\
+                \dot{\xi} &= A_c \xi + B_c \gamma(x) \left[u - \alpha(x)\right] \\
+                y &= C_c \xi
+        \end{split}
 \end{equation}
 where $z = T(x)$ is a change of variables. The transform $T(x)$ should be a continuously differential map with a continuously differential inverse also known as a \textit{diffeomorphism}.
 
@@ -122,6 +126,30 @@ We can now transform the system to the normal form.
         \dot{\xi} &= \dot{x}_3 = -\eta_1 + u
         \end{split}
 \end{equation}
+where $\xi$ is the external part of the system and $\eta$ is the internal part, which in relation to the normal form becomes
+\begin{equation}
+        \dot{\xi} = 0\xi + 1\left[u - \eta_1\right]
+\end{equation}
+Where the external part is linearised by
+\begin{equation}
+        u = \alpha(x) + \gamma^{-1} (x) v
+\end{equation}
+
 \assignment{
 c) is the system minimum phase    
 }
+\textit{The system is said to be minimum phase if $\dot{\eta} = f_0(\eta,0)$ has an asymtotically stable equilibrium point in the domain of interest.}
+
+We could also say that all the zeros of the system should be in the open left half plane.
+
+\begin{equation}
+        \dot{\eta} = f_0(\eta,0) = 
+        \begin{bmatrix}
+                -1 & 1 \\
+                1 & -1
+        \end{bmatrix}
+        \begin{bmatrix}
+                \eta_1 \\
+                \eta_2
+        \end{bmatrix}
+\end{equation}
