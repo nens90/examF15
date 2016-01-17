@@ -5,3 +5,21 @@
     \item If the model is not acceptable/validated what approaches can be used?
   \end{enumerate}
 }
+
+To validate a model it must be tested on the real system. It is important that the validation test is not the same test than was used for finding model parameters. 
+
+If the model structure is correct the the error between the prediction error is white noise. Therefore in cases where it is able to measure the prediction error the model can be validated by checking if the error is white noise. 
+
+The white noise check can be made by use of an auto correlation function. (White noise has no correlation between the samples.)
+
+\assignment{
+  \begin{enumerate}
+    \item If the model is not acceptable/validated what approaches can be used?
+  \end{enumerate}
+}
+
+Phenomenas that results in prediction errors can be modeled and included as states. 
+
+In case the model is unknown Multi model estimation can be used. This means making several parallel estimations where it is assumed that on of them is correct. One of them will prove better than the others an is therefore chosen. In case of a switching system the same principle can be used. Then the rest of the estimators are kept running and in case the system switches a new estimator will prove to be best. 
+
+Model parameters can be re-estimated based on tests on the real system.
