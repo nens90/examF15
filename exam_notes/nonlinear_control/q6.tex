@@ -27,10 +27,19 @@ The white noise check can be made by use of an auto correlation function. (White
         2. If the model is not acceptable/validated what approaches can be used?
 }
 
+\section*{Multi Model State Estimation}
 Phenomenas that results in prediction errors can be modeled and included as states. 
 
-In case the model is unknown Multi model estimation can be used. This means making several parallel estimations where it is assumed that on of them is correct. One of them will prove better than the others an is therefore chosen. In case of a switching system the same principle can be used. Then the rest of the estimators are kept running and in case the system switches a new estimator will prove to be best. 
+In case the model is unknown Multi model estimation can be used. This means making several parallel estimations where it is assumed that on of them is correct. One of them will prove better than the others an is therefore chosen. In case of a switching system the same principle can be used. Then the rest of the estimators are kept running and in case the system switches a new estimator will prove to be best.
 
-Model parameters can be re-estimated based on tests on the real system. This can be based on grey-box estimation. 
+\section*{Parameter estimation}
+\begin{itemize}
+        \item Estimate unknown parameter as states in EKF/UKF
+        \item Grey-box estimation
+        \item Maximum likelihood method
+        \item System identification (black-box)
+\end{itemize}
 
-In case the system is unknown (both parameters and structure) black-box estimation can be used. 
+% Model parameters can be re-estimated based on tests on the real system. This can be based on grey-box estimation. 
+
+% In case the system is unknown (both parameters and structure) black-box estimation can be used. 
