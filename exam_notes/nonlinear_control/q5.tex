@@ -8,15 +8,21 @@
 
 \assignment{1. When is this estimation methods needed?}
 \section*{EKF}
-The Extended Kalman Filter is used as an estimator for when the dynamic system is Non-linear.
+The Extended Kalman Filter is used as an estimator for when the system dynamics is weak Non-linear (Almost linear).
 \begin{itemize}
-        \item 
+        \item Works for Sufficiently smooth systems.
+        \item Stability not guaranteed.
+        \item Convergence not guaranteed.
+        \item Calculations of the Jacobian can be very difficult.
+        \item We need to have a good estimate of the initial state $\hat{x}_0$
 \end{itemize}
+
 % \textbf{luenberger observer:} Linear system \\
 % \textbf{Kalman filter:} Cases where the system can be linearised(once) nicely for the entire desired set \\
 % \textbf{Extended Kalman filter:} The EKF is good for non-linear systems, where a big span is needed, but no one linearisation can cover the span nicely. \\
 
 \section*{UKF}
+
 % \begin{figure}[H]
 %         \includegraphics[width=5cm]{EKFsys.png}
 % \end{figure}
