@@ -9,9 +9,17 @@
 \assignment{
         1. How can a model be validated?
 }
-To validate a model it must be tested on the real system. It is important that the validation test is not the same test than was used for finding model parameters. 
+% To validate a model it must be tested on the real system. It is important that the validation test is not the same test than was used for finding model parameters.
+\section*{Model Validation}
+\begin{itemize}
+         \item Tested on a real system.
+         \item The validation should be tested on an other setup (Other than the one used for finding model parameteres).
+         \item The estimation error should only contain \textbf{white noise}.
+         \item Validate estimation error with an \textbf{auto correlation function}
+         \item estimate the auto correlation function with confidence interval.
+ \end{itemize} 
 
-If the model structure is correct the the error between the prediction error is white noise. Therefore in cases where it is able to measure the prediction error the model can be validated by checking if the error is white noise. 
+% If the model structure is correct the the error between the prediction error is white noise. Therefore in cases where it is able to measure the prediction error the model can be validated by checking if the error is white noise. 
 
 The white noise check can be made by use of an auto correlation function. (White noise has no correlation between the samples.)
 
