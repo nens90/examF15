@@ -1,30 +1,35 @@
 \chapter{Question 2}
 \assignment{
-Consider the system:
-\begin{equation}
-\begin{split}
-        \dot{x}_1 = -x_1 +x_2 - x_3 \\
-        \dot{x}_2 = - x_1 x_3 - x_2 + u \\
-        \dot{x}_3 = - x_1 + u \\
-        y = x_3 
-\end{split}
-\end{equation}
+  Consider the system:
+  \begin{equation}
+    \begin{split}
+      \dot{x}_1 = -x_1 +x_2 - x_3 \\
+      \dot{x}_2 = - x_1 x_3 - x_2 + u \\
+      \dot{x}_3 = - x_1 + u \\
+      y = x_3 
+    \end{split}
+  \end{equation}
 
-a) Is the system Input-Output linearizable \\
-b) If yes, transform it into the normal form and specify the region over which the transformation is valid \\
-c) is the system minimum phase \\
+  a) Is the system Input-Output linearizable \\
+  b) If yes, transform it into the normal form and specify the region over which the transformation is valid \\
+  c) is the system minimum phase \\
 }
 
 \assignment{
-        a) Is the system Input-Output linearisable?
+  a) Is the system Input-Output linearisable?
 }
-We need to verify that we are able to linearise the \textbf{output} $y$ through the \textbf{input} $u$. This is done by investigating the \textit{relative degree} $\rho$, where $1 \leq \rho \leq n$, in a region $D_0 \subset D$ and $n$ being the number of states.
+We need to verify that we are able to linearise the \textbf{output} $y$ through the \textbf{input} $u$. This is done by
+investigating the \textit{relative degree} $\rho$, where $1 \leq \rho \leq n$, in a region $D_0 \subset D$ and $n$ being
+the number of states. 
 
 \begin{equation}
         \dot{y} = -x_1 + u \quad \rightarrow \quad \rho = 1
 \end{equation}
 
-which have a relative degree of 1 because the relation between the output and the input is found through one differentiation.
+which have a relative degree of 1 because the relation between the output and the input is found through one
+differentiation.
+
+That is, \textbf{yes} the system is system Input-Output linearisable
 
 \assignment{
 b) If yes, transform it into the normal form and specify the region over which the transformation is valid \\
@@ -37,7 +42,8 @@ We want to transform the Non-linear system to a linear system on the normal form
                 y &= C_c \xi
         \end{split}
 \end{equation}
-where $z = T(x)$ is a change of variables. The transform $T(x)$ should be a continuously differential map with a continuously differential inverse also known as a \textit{diffeomorphism}.
+where $z = T(x)$ is a change of variables. The transform $T(x)$ should be a continuously differential map with a
+continuously differential inverse also known as a \textit{diffeomorphism}. 
 
 \begin{equation}
         z = T(x) = 
@@ -126,7 +132,8 @@ We can now transform the system to the normal form.
         \dot{\xi} &= \dot{x}_3 = -\eta_1 + u
         \end{split}
 \end{equation}
-where $\xi$ is the external part of the system and $\eta$ is the internal part, which in relation to the normal form becomes
+where $\xi$ is the external part of the system and $\eta$ is the internal part, which in relation to the normal form
+becomes 
 \begin{equation}
         \dot{\xi} = 0\xi + 1\left[u - \eta_1\right]
 \end{equation}
@@ -138,7 +145,8 @@ Where the external part is linearised by
 \assignment{
 c) is the system minimum phase    
 }
-\textit{The system is said to be minimum phase if $\dot{\eta} = f_0(\eta,0)$ has an asymtotically stable equilibrium point in the domain of interest.}
+\textit{The system is said to be minimum phase if $\dot{\eta} = f_0(\eta,0)$ has an asymtotically stable equilibrium
+  point in the domain of interest.} 
 
 We could also say that all the zeros of the system should be in the open left half plane.
 
