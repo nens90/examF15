@@ -16,7 +16,7 @@ We can formulate a necessary condition for AS; which is that for every system in
 
 Even though all the systems is asymptotically stable it would still be possible to construct a divergent trajectory from any initial state, except for some special cases where $A_i$ is pairwise commutative ($A_iA_j = A_j A_i$, for all $i,j \in I$) or symmetric ($A_i = A_i^T$ for all $i$), or $A_i$ is normal ($A_iA_i^T = A_i^T A_i$ for all $i$).
 
-An other way to formulate stability of linear switched systems is to find a common quadratic Lyapunov function (CQLF) for all the systems in the switching system.
+Another way to formulate stability of linear switched systems is to find a common quadratic Lyapunov function (CQLF) for all the systems in the switching system.
 
 \begin{equation}
         \begin{split}
@@ -30,10 +30,10 @@ The conditions for the existence of a CQLF can be expressed as an LMI, namely th
         P > 0, \quad PA_i + A_i^TP < 0, \quad \forall i \in I
 \end{equation}
 \section{Special case}
-A spacial case for an second-order arbitrary switching system with two modes, a necessary and sufficient condition can be stated for the existence of a CQLF.
+A special case for a second-order arbitrary switching system with two modes, a necessary and sufficient condition can be stated for the existence of a CQLF.
 \begin{itemize}
         \item Necessary condition is that both $A_1$, $A_2$ is Hurwitz matrices in $\mathbb{R}^{2\times2}$
-        \item The matrices $A_1A_2$ and $A_1A_2^{-1}$ do not have any negative eigenvalues.
+        \item A necessary and sufficient condition is the matrices $A_1A_2$ and $A_1A_2^{-1}$ do not have any negative eigenvalues.
 \end{itemize}
 Then the existent of a CQLF is feasible.
 \begin{figure}[htbp]
