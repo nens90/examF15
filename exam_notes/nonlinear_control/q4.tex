@@ -38,7 +38,22 @@ Since $s \in \Sigma_{n}$ is a sum of squared polynomials, it is clear that
 Say we are interested in a $V(x)$ that proves asymptotic stability of the system. Then $V(x)$ must satisfy
 \begin{equation}
         \begin{split}
-                V(x) - l_1 \quad &\in \quad \Sigma_n \\
-                -\left(\frac{\partial V}{\partial x} f(x) + l_2 \right) \quad &\in \quad \Sigma_n
+                V(x) - l_1 & \geq 0 \\
+                -\left(\frac{\partial V}{\partial x} f(x) + l_2 \right) &\geq 0
+        \end{split}
+\end{equation}
+
+where $l_1$ and $l_2$ are positive definite functions. $V - l_1$ and $-\left(\frac{\partial V}{\partial x} f(x) + l_2 \right)$ are SOS polynomials and can be checked as LMIs.
+
+If the system is a linear system with dynamics
+\begin{equation}
+        \dot{x} = Ax
+\end{equation}
+and the Lyapunov function to be quadratic $V(x) = x^T P x$ then we can verify stability by solving for the LMI conditions
+
+\begin{equation}
+        \begin{split}
+                &P > 0 \\
+                &A^T P + PA < 0
         \end{split}
 \end{equation}
