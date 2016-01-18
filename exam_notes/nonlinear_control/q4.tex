@@ -16,10 +16,27 @@ Then the equilibrium point $x = 0$ is \textbf{stable}. Moreover, if
 \begin{equation}
         \dot{V}(x) < 0 \quad \in D - \{0\}
 \end{equation}
-Then $x = 0$ is \textbf{asymptotically stable}
+Then $x = 0$ is \textbf{asymptotically stable}, were $V$ and $\dot{V}$ is given as
+\begin{equation}
+        \begin{split}
+                V(x) &= x^T P x \\
+                \dot{V}(x) &= \frac{\partial V}{\partial x} f(x)
+        \end{split}
+\end{equation}
+
+where $P$ is symmetric and positive definite.
 
 \section*{Sum of Squares}
 Since $s \in \Sigma_{n}$ is a sum of squared polynomials, it is clear that 
 \begin{equation}
         s(x) \geq 0, \quad \forall \quad \mathbb{R}^n
+\end{equation}
+
+\section*{Check for stability}
+Say we are interested in a $V(x)$ that proves asymptotic stability of the system. Then $V(x)$ must satisfy
+\begin{equation}
+        \begin{split}
+                V(x) - l_1 \quad &\in \quad \Sigma_n \\
+                -\left(\frac{\partial V}{\partial x} f(x) + l_2 \right) \quad &\in \quad \Sigma_n
+        \end{split}
 \end{equation}
