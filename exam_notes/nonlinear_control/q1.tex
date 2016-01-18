@@ -5,14 +5,27 @@ A system is given as:
 \begin{equation}
 \begin{split}
         \dot{x}_1 &= x_2 \\
-        \dot{x}_2 &= -x_{1}^{3} -x_{2}^{3} \\
-        V(t) &= a \g x_{1}^{u} + b \g x_{2}^{v} \geq 0
+        \dot{x}_2 &= -x_{1}^{3} -x_{2}^{3} 
 \end{split} 
 \end{equation}
 
 Show that the system is globally is asymptotically stable
 }
 
+The condition for stability in $x = 0$ is:
+\begin{equation}
+  \dot{V}(x) = \nabla V(x)\g f(x) \leq 0,\quad V(0) = 0, V(x)>0 \text{ in } D - \{0\}
+\end{equation}
+The condition for asymptotic stability in $x = 0$ is:
+\begin{equation}
+  \dot{V}(x) = \nabla V(x)\g f(x) < 0,\quad  V(x)>0 \text{ in } D - \{0\}
+\end{equation}
+
+Where in this case $f(x) = \begin{bmatrix} x_2 \\[2mm] -x_{1}^{3} - x_{2}^3 \end{bmatrix}$. We choose a $V(x)$ as:
+\begin{equation}
+          V(x) = a \g x_{1}^{u} + b \g x_{2}^{v} \geq 0
+\end{equation}
+This leads to:
 \begin{equation}
 \begin{split}
         \dot{V}(t) = 
@@ -23,8 +36,8 @@ Show that the system is globally is asymptotically stable
         x_2 \\[2mm]
         -x_{1}^{3} - x_{2}^3 
         \end{bmatrix}
-        \leq 0 \\
-        u \g a \g x_{1}^{u-1} \g x_2 - v \g b \g x_{1}^{3} \g x_{2}^{v-1} - v \g b \g x_{2}^{v+2}
+        \leq 0 \\[2mm]
+        u \g a \g x_{1}^{u-1} \g x_2 - v \g b \g x_{1}^{3} \g x_{2}^{v-1} - v \g b \g x_{2}^{v+2} \leq 0
 \end{split}
 \end{equation}
 De to første led vil vi gerne fjerne, det kan gøres ved at sætte $v$, $u$, $a$ og $b$
